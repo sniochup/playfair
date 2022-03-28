@@ -1,0 +1,24 @@
+body{
+    font-family: sans-serif;
+    background-color: #F0F2F5;
+}
+
+nav{
+    margin-bottom: 50px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+td{
+    text-align: center;
+    font-size: x-large;
+}
+
+.wrap {
+   white-space: pre-wrap;      /* CSS3 */
+   white-space: -moz-pre-wrap; /* Firefox */
+   white-space: -o-pre-wrap;   /* Opera 7 */
+   word-wrap: break-word;      /* IE */
+}

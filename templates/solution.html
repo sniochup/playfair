@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 style="text-align: center; margin-bottom: 10px">
+    <dt>Key:</dt>
+    {{ key }}
+</h2>
+<table class="table table-dark table-striped w-25 mx-auto">
+    {% for c in cipher%}
+    <tr>
+        <td>{{ c[0] }}</td>
+        <td>{{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+        <td>{{ c[3] }}</td>
+        <td>{{ c[4] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-6 wrap">
+            {% if flag == 0 %}
+            <h2><dt>Original text:</dt></h2>
+            {% else %}
+            <h2><dt>Encrypted text:</dt></h2>
+            {% endif %}
+            {{ text }}
+        </div>
+
+        <div class="col-sm-6 wrap">
+            {% if flag == 0 %}
+            <h2><dt>Encrypted text:</dt></h2>
+            {% else %}
+            <h2><dt>Decoded text:</dt></h2>
+            {% endif %}
+            {{ etext }}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
